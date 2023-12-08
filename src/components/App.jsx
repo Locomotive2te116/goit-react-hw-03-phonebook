@@ -13,6 +13,8 @@ export class App extends React.Component {
     ],
     filter: '',
   };
+
+  // fdjdydj
   componentDidMount() {
     const storedContacts = localStorage.getItem('contacts');
     if (storedContacts) {
