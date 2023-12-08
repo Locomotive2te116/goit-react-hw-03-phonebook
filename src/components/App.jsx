@@ -16,10 +16,10 @@ export class App extends React.Component {
 
   // fdjdydj
   componentDidMount() {
-    const storedContacts = localStorage.getItem('contacts');
-    if (storedContacts) {
+    const contactsAddToLS = localStorage.getItem('contacts');
+    if (contactsAddToLS) {
       this.setState({
-        contacts: JSON.parse(storedContacts),
+        contacts: JSON.parse(contactsAddToLS),
       });
     }
   }
