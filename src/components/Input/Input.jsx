@@ -7,8 +7,8 @@ export class Input extends React.Component {
     number: '',
   };
 
-  handleValueChange = (field, event) => {
-    this.setState({ [field]: event.target.value });
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   createContact = event => {
@@ -44,7 +44,7 @@ export class Input extends React.Component {
               value={this.state.name}
               type="text"
               placeholder="Enter contact name"
-              onChange={event => this.handleValueChange('name', event)}
+              onChange={this.handleChange}
             />
           </label>
 
@@ -56,7 +56,7 @@ export class Input extends React.Component {
               value={this.state.number}
               type="tel"
               placeholder="Enter contact number"
-              onChange={event => this.handleValueChange('number', event)}
+              onChange={this.handleChange}
               required
             />
           </label>
